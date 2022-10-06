@@ -48,8 +48,9 @@ android {
         jvmTarget = '1.8'
     }
 
-    lint {
+    lintOptions {
         checkOnly("GlobalScopeUsage", "JobInBuilderUsage", "RawColorUsage")
+        checkDependencies true
     }
 }
 
@@ -61,4 +62,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     testImplementation 'junit:junit:4.13.2'
+
+    implementation project(':lint-checks')
+    lintPublish project(":lint-checks")
 }

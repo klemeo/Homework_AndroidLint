@@ -9,7 +9,7 @@ class ColorIssue : ResourceXmlDetector() {
     companion object {
         private const val MESSAGE = "Do not use raw colors"
         val ISSUE = Issue.create(
-            id = "JobInBuilderUsage",
+            id = "RawColorUsage",
             briefDescription = "Raw color usage",
             explanation = MESSAGE,
             implementation = Implementation(
